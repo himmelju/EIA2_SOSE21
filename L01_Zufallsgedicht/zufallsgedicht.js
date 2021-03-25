@@ -8,7 +8,7 @@ var randompoem;
         "braut", "studiert", "zaubert", "hasst", "liebt", "zerstört"
     ];
     let object = [
-        "Zaubertränke", "Die Karte des Rumtreibers", "Dementoren", "Verteidigung gegen die dunklen Künste", "Butterbier", "Elderstab"
+        "Zaubertränke", "die Karte des Rumtreibers", "Dementoren", "Verteidigung gegen die dunklen Künste", "Butterbier", "Elderstab"
     ];
     //console.log(subject);
     //console.log(verb);

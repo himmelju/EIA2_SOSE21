@@ -10,7 +10,7 @@ namespace randompoem {
     ];
 
     let object: string[] = [
-        "Zaubertränke", "Die Karte des Rumtreibers", "Dementoren", "Verteidigung gegen die dunklen Künste", "Butterbier", "Elderstab"
+        "Zaubertränke", "die Karte des Rumtreibers", "Dementoren", "Verteidigung gegen die dunklen Künste", "Butterbier", "Elderstab"
 
     ];
 
