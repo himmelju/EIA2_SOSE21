@@ -1,0 +1,29 @@
+html {
+    background-color: rgb(47, 89, 145);
+}
+
+h1 {
+    color: white;
+}
+
+#div0 {
+    border: thick solid black;
+    border-width: 7px;
+    float: left;
+    height: 800px;
+    width: 750px;
+    margin-top: 80px;
+    margin-left: 350px;
+    background-color: white;
+}
+
+#div1 {
+    border: thick solid black;
+    border-width: 7px;
+    float: right;
+    height: 800px;
+    width: 750px;
+    margin-right: 350px;
+    margin-top: 80px;
+    background-color: white;
+}
