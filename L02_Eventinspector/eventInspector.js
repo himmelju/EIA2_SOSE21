@@ -1,9 +1,7 @@
 "use strict";
 var eventInspector;
 (function (eventInspector) {
-    window.addEventListener("load", function () {
-        handleLoad();
-    });
+    window.addEventListener("load", handleLoad);
     function handleLoad() {
         document.addEventListener("mousemove", function () {
             handleLoad();

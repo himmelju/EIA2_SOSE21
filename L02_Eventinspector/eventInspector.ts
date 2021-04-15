@@ -1,9 +1,6 @@
 namespace eventInspector {
 
-    window.addEventListener("load", function(): void {
-        handleLoad();
-
-    });        
+    window.addEventListener("load", handleLoad);     
     
     function handleLoad(): void {
 
@@ -16,5 +13,5 @@ namespace eventInspector {
         document.addEventListener("keyup", function (): void {
             handleLoad();
         });
-    }
+    } 
 }
