@@ -13,7 +13,7 @@ var eventInspector;
         let y = _event.pageY;
         let spanForMouseCursor = document.querySelector("span");
         spanForMouseCursor.style.left = x + "px";
-        spanForMouseCursor.style.top = x + "px";
+        spanForMouseCursor.style.top = y + "px";
     }
     function logInfo(_event) {
         console.log(_event.type);
