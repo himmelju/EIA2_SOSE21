@@ -11,7 +11,7 @@ namespace eventInspector {
 
     } 
 
-    function setInfoBox(_event: Event): void {
+    function setInfoBox(_event: MouseEvent): void {
         let x: number = _event.pageX + 10;
         let y: number = _event.pageY + 10;
         let spanForMouseCursor: HTMLSpanElement = <HTMLSpanElement>document.querySelector("span");
