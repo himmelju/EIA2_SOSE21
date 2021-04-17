@@ -9,8 +9,8 @@ var eventInspector;
         body.addEventListener("click", logInfo);
     }
     function setInfoBox(_event) {
-        let x = _event.pageX;
-        let y = _event.pageY;
+        let x = _event.pageX + 10;
+        let y = _event.pageY + 10;
         let spanForMouseCursor = document.querySelector("span");
         spanForMouseCursor.style.left = x + "px";
         spanForMouseCursor.style.top = y + "px";
