@@ -1,0 +1,12 @@
+body {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    position: relative;
+}
+
+#canvas {
+    height: 1000px;
+    width: 1300px;
+    background-color: black;
+}
