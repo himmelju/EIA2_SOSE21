@@ -1,6 +1,6 @@
-body {
-    background-color: rgb(39, 85, 145);
-    justify-items: center;
+html {
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(45, 102, 167), rgb(255, 255, 255));
+    height: 1400px;
 }
 
 h1 {
@@ -13,7 +13,7 @@ p {
 }
 
 #reload {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border: solid 5px black;
     border-radius: 10px;
     width: 200px;
