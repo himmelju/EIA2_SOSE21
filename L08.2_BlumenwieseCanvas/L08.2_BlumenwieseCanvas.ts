@@ -118,7 +118,7 @@ namespace BlumenwieseCanvas {
     }
 
     function drawRedFlowers(): void {
-        console.log("BlueFlowers"); 
+        console.log("RedFlowers"); 
 
         for (let i: number = 0; i < 7; i++) {
             let x: number = Math.random() * 900;

@@ -88,7 +88,7 @@ var BlumenwieseCanvas;
         crc2.restore();
     }
     function drawRedFlowers() {
-        console.log("BlueFlowers");
+        console.log("RedFlowers");
         for (let i = 0; i < 7; i++) {
             let x = Math.random() * 900;
             let y = Math.random() * 200;
