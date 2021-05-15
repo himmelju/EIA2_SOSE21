@@ -23,7 +23,7 @@ namespace BlumenwieseCanvas {
         drawMountains({x: 0, y: horizon}, 75, 200, "grey", "white");
         drawMountains({x: 0, y: horizon}, 50, 150, "grey", "lightgrey");
         drawRedFlowers();
-        drawBlueFlowers();
+        drawOrangeFlowers();
     }
 
     function drawBackground(): void {
@@ -155,8 +155,8 @@ namespace BlumenwieseCanvas {
         }
     }
 
-    function drawBlueFlowers(): void {
-        console.log("BlueFlowers");
+    function drawOrangeFlowers(): void {
+        console.log("OrangeFlowers");
         
         for (let i: number = 0; i < 10; i++) {
             let x: number = Math.random() * 400;
@@ -178,7 +178,7 @@ namespace BlumenwieseCanvas {
             crc2.ellipse(135, 575, 6, 32, 10, 30, 50);
             crc2.closePath();
             crc2.fill();
-            //Blaue Blume 
+            //Orange Blume 
             crc2.beginPath();
             crc2.arc(100, 502, 30, -0.5, Math.PI, false);
             crc2.closePath();

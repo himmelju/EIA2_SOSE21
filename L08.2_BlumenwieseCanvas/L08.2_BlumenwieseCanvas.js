@@ -16,7 +16,7 @@ var BlumenwieseCanvas;
         drawMountains({ x: 0, y: horizon }, 75, 200, "grey", "white");
         drawMountains({ x: 0, y: horizon }, 50, 150, "grey", "lightgrey");
         drawRedFlowers();
-        drawBlueFlowers();
+        drawOrangeFlowers();
     }
     function drawBackground() {
         console.log("Background");
@@ -123,8 +123,8 @@ var BlumenwieseCanvas;
             crc2.restore();
         }
     }
-    function drawBlueFlowers() {
-        console.log("BlueFlowers");
+    function drawOrangeFlowers() {
+        console.log("OrangeFlowers");
         for (let i = 0; i < 10; i++) {
             let x = Math.random() * 400;
             let y = Math.random() * 10;
@@ -144,7 +144,7 @@ var BlumenwieseCanvas;
             crc2.ellipse(135, 575, 6, 32, 10, 30, 50);
             crc2.closePath();
             crc2.fill();
-            //Blaue Blume 
+            //Orange Blume 
             crc2.beginPath();
             crc2.arc(100, 502, 30, -0.5, Math.PI, false);
             crc2.closePath();
