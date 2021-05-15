@@ -22,6 +22,8 @@ namespace BlumenwieseCanvas {
         drawCloud({x: 500, y: 125}, {x: 250, y: 75});
         drawMountains({x: 0, y: horizon}, 75, 200, "grey", "white");
         drawMountains({x: 0, y: horizon}, 50, 150, "grey", "lightgrey");
+        drawRedFlowers();
+        drawBlueFlowers();
     }
 
     function drawBackground(): void {
@@ -113,6 +115,78 @@ namespace BlumenwieseCanvas {
         crc2.fill();
 
         crc2.restore();
+    }
+
+    function drawRedFlowers(): void {
+        console.log("BlueFlowers"); 
+
+        for (let i: number = 0; i < 7; i++) {
+            let x: number = Math.random() * 900;
+            let y: number = Math.random() * 200;
+            crc2.save();
+            crc2.translate(x, y);
+            crc2.strokeStyle = "darkgreen";
+            crc2.lineWidth = 5;
+            crc2.fillStyle = "darkgreen";
+            crc2.beginPath();
+            crc2.moveTo(50, 540);
+            crc2.lineTo(52, 600);
+            crc2.closePath();
+            crc2.stroke();
+            crc2.closePath();
+            crc2.stroke();
+            crc2.beginPath();
+            crc2.ellipse(67, 575, 6, 32, 10, 30, 50);
+            crc2.closePath();
+            crc2.fill();
+            //rote Blüte außen
+            crc2.fillStyle = "firebrick";
+            crc2.beginPath();
+            crc2.arc(45, 520, 30, 0, 2 * Math.PI);
+            crc2.closePath();
+            crc2.fill();
+            //gelbe Blütenmitte
+            crc2.fillStyle = "gold";
+            crc2.beginPath();
+            crc2.arc(45, 520, 15, 0, 2 * Math.PI);
+            crc2.closePath();
+            crc2.fill();
+            crc2.restore(); 
+        }
+    }
+
+    function drawBlueFlowers(): void {
+        console.log("BlueFlowers");
+        
+        for (let i: number = 0; i < 10; i++) {
+            let x: number = Math.random() * 400;
+            let y: number = Math.random() * 10;
+
+            crc2.save();
+            crc2.translate(x, y);
+            crc2.strokeStyle = "darkgreen";
+            crc2.lineWidth = 5;
+            crc2.fillStyle = "darkgreen";
+            crc2.beginPath();
+            crc2.moveTo(100, 500);
+            crc2.lineTo(120, 600);
+            crc2.closePath();
+            crc2.stroke();
+            crc2.closePath();
+            crc2.stroke();
+            crc2.beginPath();
+            crc2.ellipse(135, 575, 6, 32, 10, 30, 50);
+            crc2.closePath();
+            crc2.fill();
+            //Blaue Blume 
+            crc2.beginPath();
+            crc2.arc(100, 502, 30, -0.5, Math.PI, false);
+            crc2.closePath();
+            crc2.lineWidth = 5;
+            crc2.fillStyle = "orangered";
+            crc2.fill();
+            
+        }
     }
     
 }
