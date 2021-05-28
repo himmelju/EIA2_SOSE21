@@ -14,10 +14,11 @@ namespace Bienen {
         crc2 = <CanvasRenderingContext2D>canvas.getContext("2d");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        createBees(10);
         createBackground();
-        createFlowers();
+        drawFlowers();
+        multipleFlowers();
         createCloud();
+        createBees(10);
         imageData =  crc2.getImageData(0, 0, canvas.width, canvas.height);
         animate();
     }   
@@ -29,15 +30,36 @@ namespace Bienen {
         drawMountains({x: 0, y: horizon}, 75, 200, "grey", "white");
         drawMountains({x: 0, y: horizon}, 50, 150, "grey", "lightgrey");
         drawBeeHive();
+        multipleFlowers();
+        drawFlowers();
     }
 
-    function createFlowers(): void {
-        let xPos: number = 0;
-        do {
-            flowers.push(new Flowers(Math.floor(Math.random() * 2) + 1, xPos, 50 + (crc2.canvas.height * golden), crc2.canvas.height * 0.9));
-            xPos += 10 + Math.random() * (50 - 10);
+    function multipleFlowers(): void {
+
+        for (let i: number = 0; i < 10; i++) {
+            let redFlower: Flowers = new Flowers();
+            flowers.push(redFlower);  
+        } 
+        
+        for (let i: number = 0; i < 10; i++) {
+            let orangeFlower: Flowers = new Flowers();
+            flowers.push(orangeFlower);  
+        } 
+        
+    }
+
+    function drawFlowers(): void {
+
+        for (let redFlower of flowers) {
+            let randomX: number = Math.floor(Math.random() * 900);
+            let randomY: number = Math.floor(Math.random() * 200);
+            redFlower.drawRedFlowers(randomX + 280, randomY + 420);
         }
-        while (xPos < crc2.canvas.width);
+        for (let orangeFlower of flowers) {
+            let randomX: number = Math.floor(Math.random() * 900);
+            let randomY: number = Math.floor(Math.random() * 200);
+            orangeFlower.drawOrangeFlowers(randomX + 100, randomY + 420);
+        }
     }
 
     function createBees (_nBee: number): void {
@@ -48,9 +70,6 @@ namespace Bienen {
 
             bienen.push(new Bees({ x: crc2.canvas.width / 2, y: crc2.canvas.height * golden }, { x: randomVelocityX, y: randomVelocityY }, randomScale));
         }
-
-        
-        
     }
 
     function createCloud (): void {

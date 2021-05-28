@@ -12,10 +12,11 @@ var Bienen;
         Bienen.crc2 = canvas.getContext("2d");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        createBees(10);
         createBackground();
-        createFlowers();
+        drawFlowers();
+        multipleFlowers();
         createCloud();
+        createBees(10);
         imageData = Bienen.crc2.getImageData(0, 0, canvas.width, canvas.height);
         animate();
     }
@@ -26,13 +27,30 @@ var Bienen;
         Bienen.drawMountains({ x: 0, y: horizon }, 75, 200, "grey", "white");
         Bienen.drawMountains({ x: 0, y: horizon }, 50, 150, "grey", "lightgrey");
         Bienen.drawBeeHive();
+        multipleFlowers();
+        drawFlowers();
     }
-    function createFlowers() {
-        let xPos = 0;
-        do {
-            flowers.push(new Bienen.Flowers(Math.floor(Math.random() * 2) + 1, xPos, 50 + (Bienen.crc2.canvas.height * Bienen.golden), Bienen.crc2.canvas.height * 0.9));
-            xPos += 10 + Math.random() * (50 - 10);
-        } while (xPos < Bienen.crc2.canvas.width);
+    function multipleFlowers() {
+        for (let i = 0; i < 10; i++) {
+            let redFlower = new Bienen.Flowers();
+            flowers.push(redFlower);
+        }
+        for (let i = 0; i < 10; i++) {
+            let orangeFlower = new Bienen.Flowers();
+            flowers.push(orangeFlower);
+        }
+    }
+    function drawFlowers() {
+        for (let redFlower of flowers) {
+            let randomX = Math.floor(Math.random() * 900);
+            let randomY = Math.floor(Math.random() * 200);
+            redFlower.drawRedFlowers(randomX + 280, randomY + 420);
+        }
+        for (let orangeFlower of flowers) {
+            let randomX = Math.floor(Math.random() * 900);
+            let randomY = Math.floor(Math.random() * 200);
+            orangeFlower.drawOrangeFlowers(randomX + 100, randomY + 420);
+        }
     }
     function createBees(_nBee) {
         for (let index = 0; index < _nBee; index++) {

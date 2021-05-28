@@ -1,62 +1,44 @@
 namespace Bienen {
+
     export class Flowers {
-        xPos: number;
-        flowerType: number;
 
-        yRandomMin: number;
-        yRandomMax: number;
+        drawRedFlowers(_x: number, _y: number): void {
+            
+            crc2.moveTo(_x, _y);
+            crc2.fillStyle = "darkgreen";
+            crc2.fillRect(_x, _y, 4, -30);
 
-        constructor(_flowerType: number, _xPos: number, _yRandomMin: number, _yRandomMax: number) {
-            this.xPos = _xPos;
-            this.flowerType = _flowerType;
+            //rote Blüte außen
+            crc2.fillStyle = "firebrick";
+            crc2.beginPath();
+            crc2.arc(_x + 2, _y - 40, 15, 0, 2 * Math.PI);
+            crc2.closePath();
+            crc2.fill();
 
-            this.yRandomMax = _yRandomMax;
-            this.yRandomMin = _yRandomMin;
-            this.draw();
+          
+            //gelbe Blütenmitte
+            crc2.fillStyle = "gold";
+            crc2.beginPath();
+            crc2.arc(_x + 2, _y - 40, 7, 0, 2 * Math.PI);
+            crc2.closePath();
+            crc2.fill();
+            crc2.restore(); 
         }
 
-        draw(): void {
+        drawOrangeFlowers(_x: number, _y: number): void {
 
-            let randomScale: number = 0.5 + Math.random() * (0.8 - 0.5);
-            let y: number = this.yRandomMin + Math.random() * (this.yRandomMax - this.yRandomMin);
-            crc2.save();
-            crc2.translate(this.xPos, y);
-            crc2.scale(randomScale, randomScale);
-            crc2.fillStyle = "green";
-            crc2.fillRect(0, 0, 5, 40);
+            crc2.moveTo(_x, _y);
+            crc2.fillStyle = "darkgreen";
+            crc2.fillRect(_x, _y, 4, 30);
+      
+            //Blüten
+            crc2.beginPath();
+            crc2.arc(_x + 2, _y - 10, 15, 0, Math.PI, false);
+            crc2.closePath();
+            crc2.lineWidth = 5;
+            crc2.fillStyle = "orangered";
+            crc2.fill();
 
-            if (this.flowerType == 1) {
-                for (let index: number = 0; index < 4; index++) {
-                    crc2.beginPath();
-                    crc2.rotate(Math.PI / 2);
-                    crc2.moveTo(0, 0);
-                    crc2.lineTo(-15, -15);
-                    crc2.lineTo(-5, -10);
-                    crc2.lineTo(0, -15);
-                    crc2.lineTo(5, -10);
-                    crc2.lineTo(15, -15);
-                    crc2.closePath();
-                    crc2.fillStyle = "blue";
-                    crc2.fill();
-                }
-                crc2.restore();
-            }
-
-            else {
-                crc2.beginPath();
-                crc2.moveTo(0, 0);
-                crc2.lineTo(-15, -5);
-                crc2.lineTo(-25, -30);
-                crc2.lineTo(-10, -20);
-                crc2.lineTo(0, -40);
-                crc2.lineTo(10, -20);
-                crc2.lineTo(25, -30);
-                crc2.lineTo(15, -5);
-                crc2.closePath();
-                crc2.fillStyle = "pink";
-                crc2.fill();
-                crc2.restore();
-            }
         }
     }
 }

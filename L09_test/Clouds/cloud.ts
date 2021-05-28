@@ -12,7 +12,7 @@ namespace Bienen {
 
         draw(): void {
 
-            crc2.save()
+            crc2.save();
             crc2.translate(this.posX, this.posY);
             crc2.beginPath();
             crc2.moveTo(-115, -20);
