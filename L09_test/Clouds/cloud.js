@@ -14,7 +14,6 @@ var Bienen;
             Bienen.crc2.beginPath();
             Bienen.crc2.moveTo(-115, -20);
             Bienen.crc2.bezierCurveTo(-155, 0, -155, 50, -55, 50);
-            Bienen.crc2.bezierCurveTo(-35, 80, 35, 80, 55, 50);
             Bienen.crc2.bezierCurveTo(135, 50, 135, 20, 105, 0);
             Bienen.crc2.bezierCurveTo(165, -60, 85, -70, 55, -50);
             Bienen.crc2.bezierCurveTo(35, -95, -35, -80, -35, -50);

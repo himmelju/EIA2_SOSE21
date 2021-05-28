@@ -35,11 +35,16 @@ var Bienen;
             Bienen.crc2.fill();
             Bienen.crc2.stroke();
             Bienen.crc2.beginPath();
-            Bienen.crc2.arc(-2, -1, 2, 0, Math.PI * 2, false);
+            Bienen.crc2.moveTo(-3, 7);
+            Bienen.crc2.lineTo(-3, -7);
+            Bienen.crc2.moveTo(0, 8);
+            Bienen.crc2.lineTo(0, -8);
+            Bienen.crc2.moveTo(3, 7);
+            Bienen.crc2.lineTo(3, -7);
+            Bienen.crc2.strokeStyle = "black";
             Bienen.crc2.stroke();
-            Bienen.crc2.beginPath();
-            Bienen.crc2.arc(2, -1, 2, 0, Math.PI * 2, false);
-            Bienen.crc2.stroke();
+            Bienen.crc2.lineWidth = 1;
+            Bienen.crc2.closePath();
             Bienen.crc2.restore();
         }
         update() {

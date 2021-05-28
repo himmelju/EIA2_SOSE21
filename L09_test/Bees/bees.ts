@@ -45,13 +45,19 @@ namespace Bienen {
             crc2.stroke();
 
             crc2.beginPath();
-            crc2.arc(-2, -1, 2 , 0, Math.PI * 2, false);
+            crc2.moveTo(-3, 7);
+            crc2.lineTo(- 3, - 7);
+            crc2.moveTo(0, 8);
+            crc2.lineTo(0,  - 8);
+            crc2.moveTo(3, 7);
+            crc2.lineTo(3, - 7);
+            crc2.strokeStyle = "black";
             crc2.stroke();
-            crc2.beginPath();
-            crc2.arc(2, -1, 2 , 0, Math.PI * 2, false);
-            crc2.stroke();
-
+            crc2.lineWidth = 1;
+            crc2.closePath();
             crc2.restore();
+
+
         }
 
         update(): void {
