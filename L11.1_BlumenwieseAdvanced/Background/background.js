@@ -80,9 +80,9 @@ var Nektar;
     function drawNektarProgress() {
         Nektar.crc2.save();
         Nektar.crc2.translate(Nektar.crc2.canvas.width, Nektar.crc2.canvas.height);
-        let amount = 0; // use it for Amount loaded
-        let startAmount = 0;
-        let diff = (amount / 100) * Math.PI * 2;
+        let amount = []; // use it for Amount loaded color
+        let startAmount = []; //number for Amount loaded
+        let diff = (amount.length / 100) * Math.PI * 2;
         Nektar.crc2.beginPath();
         Nektar.crc2.arc(-100, -500, 50, 0, 2 * Math.PI, false);
         Nektar.crc2.fillStyle = "yellow"; // for color of circle
@@ -94,16 +94,16 @@ var Nektar;
         Nektar.crc2.textAlign = "center"; //you know already for aligning text in center;
         Nektar.crc2.lineWidth = 15; // for Stroke width
         Nektar.crc2.beginPath(); // starting circle drawing function
-        Nektar.crc2.arc(-100, -500, 50, startAmount, diff + startAmount, false);
+        Nektar.crc2.arc(-100, -500, 50, startAmount.length, diff + startAmount.length, false);
         Nektar.crc2.stroke(); // Stroke function
-        Nektar.crc2.fillText(startAmount + "% Nektar", -100 + 2, -500 + 6); //text value & text position
+        Nektar.crc2.fillText(startAmount.length + "% Nektar", -100 + 2, -500 + 6); //text value & text position
         function start() {
-            setInterval(increase, 1000);
+            setInterval(updateNectar, 1000);
         }
-        function increase() {
-            if (startAmount < 100) {
-                startAmount++;
-                amount = startAmount;
+        function updateNectar() {
+            if (startAmount.length < 100) {
+                startAmount.push(1);
+                amount.push(1);
             }
         }
         start();

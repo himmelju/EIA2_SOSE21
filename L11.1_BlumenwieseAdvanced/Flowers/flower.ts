@@ -2,7 +2,7 @@ namespace Nektar {
 
     export class Flowers {
 
-        drawRedFlowers(_x: number, _y: number): void {
+        public drawRedFlowers(_x: number, _y: number): void {
             
             crc2.moveTo(_x, _y);
             crc2.fillStyle = "darkgreen";
@@ -25,7 +25,7 @@ namespace Nektar {
             crc2.restore(); 
         }
 
-        drawOrangeFlowers(_x: number, _y: number): void {
+        public drawOrangeFlowers(_x: number, _y: number): void {
 
             crc2.moveTo(_x, _y);
             crc2.fillStyle = "darkgreen";

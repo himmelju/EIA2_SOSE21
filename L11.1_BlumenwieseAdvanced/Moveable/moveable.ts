@@ -1,11 +1,11 @@
 namespace Nektar {
     
     export class Moveable {
-        posX: number;
-        posY: number;
+        protected posX: number;
+        protected posY: number;
     
-        velocityX: number;
-        velocityY: number;
+        protected velocityX: number;
+        protected velocityY: number;
     
         constructor(_position: Vector, _velocity: Vector) {
               this.posX = _position.x; 
@@ -15,11 +15,11 @@ namespace Nektar {
               this.velocityY = _velocity.y;
         }
     
-        draw(): void {
+        public draw(): void {
             //Draw
         }
     
-        update(): void {
+        public update(): void {
             //Update
         }
     }
