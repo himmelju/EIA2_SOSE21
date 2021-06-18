@@ -124,10 +124,8 @@ namespace Nektar {
         crc2.arc(-100, -500, 50, startAmount, diff + startAmount, false);
         crc2.stroke(); // Stroke function
     
-        crc2.fillText(startAmount + "%", -100 + 2 , -500 + 6); //text value & text position
+        crc2.fillText(startAmount + "% Nektar", -100 + 2 , -500 + 6); //text value & text position
 
-        start();
-        
         function start(): void {
             setInterval(increase, 1000);
         }
@@ -135,10 +133,10 @@ namespace Nektar {
         function increase(): void {
             if (startAmount < 100) {
                 startAmount++;
-                startAmount = amount;
+                amount = startAmount;
             }
         }
         
-        
+        start();
     }
 }

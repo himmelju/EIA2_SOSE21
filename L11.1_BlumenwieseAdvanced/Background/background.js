@@ -96,17 +96,17 @@ var Nektar;
         Nektar.crc2.beginPath(); // starting circle drawing function
         Nektar.crc2.arc(-100, -500, 50, startAmount, diff + startAmount, false);
         Nektar.crc2.stroke(); // Stroke function
-        Nektar.crc2.fillText(startAmount + "%", -100 + 2, -500 + 6); //text value & text position
-        start();
+        Nektar.crc2.fillText(startAmount + "% Nektar", -100 + 2, -500 + 6); //text value & text position
         function start() {
             setInterval(increase, 1000);
         }
         function increase() {
             if (startAmount < 100) {
                 startAmount++;
-                startAmount = amount;
+                amount = startAmount;
             }
         }
+        start();
     }
     Nektar.drawNektarProgress = drawNektarProgress;
 })(Nektar || (Nektar = {}));
