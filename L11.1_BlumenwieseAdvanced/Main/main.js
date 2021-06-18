@@ -75,6 +75,7 @@ Quellen: <Huu Thien (Inspo), Lektion 10.2 Asteroids>
         requestAnimationFrame(animate);
         Nektar.crc2.clearRect(0, 0, Nektar.crc2.canvas.width, Nektar.crc2.canvas.height);
         Nektar.crc2.putImageData(imageData, 0, 0);
+        //drawNektarProgress();
         for (let index = 0; index < movables.length; index++) {
             movables[index].update();
             movables[index].draw();

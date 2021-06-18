@@ -104,10 +104,10 @@ namespace Nektar {
         crc2.save();
         crc2.translate(crc2.canvas.width, crc2.canvas.height);  
     
-        let amount: number[] = [];  // use it for Amount loaded color
-        let startAmount: number[] = []; //number for Amount loaded
+        let amount: number = 0;  // use it for Amount loaded color
+        let startAmount: number = 0; //number for Amount loaded
     
-        let diff: number = (amount.length / 100) * Math.PI * 2;
+        let diff: number = (amount / 100) * Math.PI * 2;
     
         crc2.beginPath();
         crc2.arc(-100, -500, 50, 0, 2 * Math.PI, false);
@@ -121,19 +121,19 @@ namespace Nektar {
         crc2.lineWidth = 15; // for Stroke width
     
         crc2.beginPath(); // starting circle drawing function
-        crc2.arc(-100, -500, 50, startAmount.length, diff + startAmount.length, false);
+        crc2.arc(-100, -500, 50, startAmount, diff + startAmount, false);
         crc2.stroke(); // Stroke function
     
-        crc2.fillText(startAmount.length + "% Nektar", -100 + 2 , -500 + 6); //text value & text position
+        crc2.fillText(startAmount + "% Nektar", -100 + 2 , -500 + 6); //text value & text position
 
         function start(): void {
             setInterval(updateNectar, 1000);
         }
         
         function updateNectar(): void {
-            if (startAmount.length < 100) {
-                startAmount.push(1);
-                amount.push(1);
+            if (startAmount < 100) {
+                startAmount++;
+                amount++;
                 
             }
         }

@@ -90,6 +90,7 @@ Quellen: <Huu Thien (Inspo), Lektion 10.2 Asteroids>
         crc2.clearRect(0, 0, crc2.canvas.width, crc2.canvas.height);
         crc2.putImageData(imageData, 0, 0);
 
+        //drawNektarProgress();
         for (let index: number = 0; index < movables.length; index ++) {
             movables[index].update();
             movables[index].draw();
