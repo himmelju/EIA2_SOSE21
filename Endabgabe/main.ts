@@ -271,7 +271,6 @@ namespace Endabgabe {
 
     }
 
-
     function createHomeTeam(): void {
         // set team number
         const teamnumber: number = 1;
