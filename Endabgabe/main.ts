@@ -247,7 +247,7 @@ namespace Endabgabe {
             );
         }
 
-        // creates bootm linesman
+        // creates bootom linesman
         const linesmanBottom: Linesman = new Linesman(new Vector(
             randomInteger(field.getPadding() + field.getWidth() / 2, field.getPadding() + field.getWidth()),
             field.getPadding() + field.getHeight()
